@@ -1,0 +1,24 @@
+{
+  express:
+    port: 5564
+  name: "site"
+  "static": './public'
+  layouts: 
+    "main": './layouts/main'
+  modules:[
+    "logger"
+    ]
+  apps:
+    "index":
+      path: "/"
+      layout: "main"
+      modules: ["testmodule"]
+      baseRoute: "home"
+      routes:
+        'register':
+          path: 'register'
+          components: ["./components/test2"]
+        'home':
+          components: ["./components/test"]
+   
+}
